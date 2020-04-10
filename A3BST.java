@@ -1,6 +1,7 @@
 package assignment3;
 import algs4.*;
 //test for github
+//test 2
 
 /*
  * This is a simplified version of the BST class
