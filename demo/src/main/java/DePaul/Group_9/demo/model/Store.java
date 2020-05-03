@@ -3,6 +3,9 @@ package DePaul.Group_9.demo.model;
 import java.io.Serializable;
 import java.util.List;
 
+import lombok.Data;
+
+@Data
 public class Store implements Serializable {
 	private int storeID;
 	private String store_name;

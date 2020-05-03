@@ -1,26 +1,15 @@
 package DePaul.Group_9.demo.model;
 
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Specified_Shoes extends Shoes {
-	private int productID;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long productID;
 	private float extraPrice;
 	private String description;
-	
-	public int getProductID() {
-		return productID;
-	}
-	public void setProductID(int productID) {
-		this.productID = productID;
-	}
-	public float getExtraPrice() {
-		return extraPrice;
-	}
-	public void setExtraPrice(float extraPrice) {
-		this.extraPrice = extraPrice;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
 }
