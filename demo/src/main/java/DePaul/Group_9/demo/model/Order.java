@@ -18,9 +18,9 @@ public class Order implements Serializable {
 	private List<Item> items ;
 	private int customerID;
 	private int storeID;
-	@JoinColumn(name="addressID", nullable = false)
+	@JoinColumn(name="id", nullable = false)
 	private Address Customer_adrs;
-	@JoinColumn(name="addressID", nullable = false)
+	@JoinColumn(name="id", nullable = false)
 	private Address Merchant_adrs;
 	private float order_price;
 	private String payment_method;
