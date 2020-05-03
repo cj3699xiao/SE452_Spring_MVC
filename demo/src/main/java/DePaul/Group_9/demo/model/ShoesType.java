@@ -2,28 +2,27 @@ package DePaul.Group_9.demo.model;
 
 import java.io.Serializable;
 
-public class ShoesType implements Serializable {
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "shoestype")
+public class ShoesType implements Serializable { 
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long ShoesNameID;
+	
+	private String ShoesName;
+	@Min(0)
+	@Max(2)
 	private int crowd;
 	private String style;
-	private String color;
-	
-	public int getCrowd() {
-		return crowd;
-	}
-	public void setCrowd(int crowd) {
-		this.crowd = crowd;
-	}
-	public String getStyle() {
-		return style;
-	}
-	public void setStyle(String style) {
-		this.style = style;
-	}
-	public String getColor() {
-		return color;
-	}
-	public void setColor(String color) {
-		this.color = color;
-	}
+	private String brand;
+	private String material;
 	
 }
