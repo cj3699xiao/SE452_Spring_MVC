@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "address")
+@Table(name = "orders")
 public class Order implements Serializable {
 	private int orderID;
 	@OneToMany(mappedBy = "items")

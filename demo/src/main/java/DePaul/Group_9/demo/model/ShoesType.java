@@ -8,8 +8,10 @@ import javax.validation.constraints.Min;
 
 import lombok.Data;
 
+@Entity
 @Data
-public class ShoesType implements Serializable {
+@Table(name = "shoestype")
+public class ShoesType implements Serializable { 
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -6,7 +6,10 @@ import javax.persistence.*;
 
 import lombok.Data;
 
+@Entity
 @Data
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "shoes")
 public class Shoes implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

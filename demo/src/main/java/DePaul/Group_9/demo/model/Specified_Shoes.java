@@ -4,12 +4,10 @@ import javax.persistence.*;
 
 import lombok.Data;
 
+@Entity
 @Data
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Specified_Shoes extends Shoes {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long productID;
+@Table(name = "shoes")
+public class Specified_Shoes extends Shoes { 
 	private float extraPrice;
 	private String description;
 }

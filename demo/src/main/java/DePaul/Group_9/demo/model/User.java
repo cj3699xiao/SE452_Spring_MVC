@@ -13,5 +13,8 @@ public abstract class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userID;
 	private String userName;
+	@OneToOne
+	@JoinColumn(name="addressID", nullable = false)
+	Address address;
 	
 }
