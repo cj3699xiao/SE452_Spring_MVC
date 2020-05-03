@@ -11,8 +11,10 @@ import lombok.Data;
 @Data
 @Table(name = "orders")
 public class Order implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderID;
-	@OneToMany(mappedBy = "items")
+	@OneToMany(mappedBy = "itemID")
 	private List<Item> items ;
 	private int customerID;
 	private int storeID;

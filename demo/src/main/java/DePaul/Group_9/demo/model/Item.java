@@ -12,7 +12,7 @@ import lombok.Data;
 public class Item implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int ItemID;
+	int itemID;
 	int quantity;
 	String note;
 	@OneToOne

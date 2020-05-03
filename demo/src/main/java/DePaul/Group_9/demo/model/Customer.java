@@ -21,10 +21,10 @@ public class Customer extends User {
 	
 	private float rating; 
 	
-	@OneToMany(mappedBy = "items")
-	private List<Item> cart;
+	@OneToMany(mappedBy = "itemID")
+	private List<Item> items;
 	
-	@OneToMany(mappedBy = "orders")
+	@OneToMany(mappedBy = "orderID")
 	private List<Order> orders;
 
 }

@@ -20,7 +20,7 @@ public class Store implements Serializable {
 	private String phone;
 	private float ratring;
 	
-	@OneToMany(mappedBy = "storeID")
+	@OneToMany(mappedBy = "ShoesNameID")
 	private List<ShoesType> Shoes_on_sale;
 	
 }
