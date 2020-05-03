@@ -14,7 +14,7 @@ public abstract class User implements Serializable {
 	private int userID;
 	private String userName;
 	@OneToOne
-	@JoinColumn(name="addressID", nullable = false)
+	@JoinColumn(name="id", nullable = false)
 	Address address;
 	
 }
