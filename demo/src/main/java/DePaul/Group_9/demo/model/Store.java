@@ -17,7 +17,7 @@ public class Store implements Serializable {
 	private String store_name;
 	
 	private String store_email;
-	private String phone;
+	private int phone;
 	private float ratring;
 	
 	@OneToMany(mappedBy = "ShoesNameID")

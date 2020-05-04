@@ -24,5 +24,5 @@ public class Comment implements Serializable {
 	private String commentWords;
 	private String reply;
 	private Date commentTime;
-	private boolean like_dislike;
+//	private boolean like_dislike;
 }
