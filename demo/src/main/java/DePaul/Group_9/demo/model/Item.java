@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "items")
+@Table(name = "items") 
 public class Item implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
