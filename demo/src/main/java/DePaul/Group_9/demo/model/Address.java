@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 import lombok.ToString;
@@ -16,6 +17,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "address")  //if name is same with table, no needs this line
 @ToString  //lombok
+@NotNull
 public class Address implements Serializable {
 	@Id  // this is a primary key 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)  // auto generated 
