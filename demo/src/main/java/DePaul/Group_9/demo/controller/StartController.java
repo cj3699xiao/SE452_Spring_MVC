@@ -15,16 +15,22 @@ public class StartController {
         return "greeting";
     }
     
-    @GetMapping("/hello1")
-    public String greeting2(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "simpleform";
-    }
+//    @GetMapping("/hello1")
+//    public String greeting2(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
+//        model.addAttribute("name", name);
+//        return "simpleform";
+//    }
     
     @GetMapping("/greeting")
     public String greeting(Model model) {
         model.addAttribute("name", "shibo");
         return "greeting";
+    }
+    
+    @GetMapping("/home_search")
+    public String home_searchpage(Model model) {
+        
+        return "home_search";
     }
     
     

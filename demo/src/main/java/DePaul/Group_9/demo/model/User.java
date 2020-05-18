@@ -26,14 +26,18 @@ public class User implements Serializable{
     private String username;
 
     @NotNull
-    @Min(21)
-    private Integer age;
+    @Size(min = 4, max = 32)
+    private String password;
     
 //	@OneToOne
 //	@JoinColumn(name="id", nullable = false)
 	@NotNull
-	@Size(min = 2, max = 30)
+	@Size(min = 4, max = 64)
 	private String address;
+	
+	@NotNull
+	@Size(min = 4,max = 64)
+	private String email;
     
     
 
