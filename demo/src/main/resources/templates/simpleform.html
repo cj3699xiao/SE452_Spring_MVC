@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <title>Hello Form</title>
+    </head>
+
+    <body>
+        <div class="container">
+            Enter Your Info
+
+            <form action="#" th:action="@{/user}" th:object="${user}" method="post">
+                <div class="row form-group">
+                    <div class="col-lg-6">                
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" th:field="*{username}" placeholder="username">
+                        <span class="badge-warning" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Name Error</span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-6">                
+                        <label for="age">Age</label>
+                        <input type="text" class="form-control" th:field="*{age}" placeholder="age">
+                        <span class="badge-warning" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-6">                
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" th:field="*{username}" placeholder="address">
+                        <span class="badge-warning" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address Error</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary">Submit</button>            
+            </form>
+        </div>   
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
+</html>
