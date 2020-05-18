@@ -17,8 +17,8 @@ public class Shoes implements Serializable{
 	private String color;
 	private float size;
 	private float price;
-	@ManyToOne
-	@JoinColumn(name="ShoesNameID", nullable = false)
-	private ShoesType type;
+//	@ManyToOne
+//	@JoinColumn(name="ShoesNameID", nullable = false)
+//	private ShoesType type;
 
 }

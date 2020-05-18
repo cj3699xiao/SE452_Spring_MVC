@@ -27,11 +27,11 @@ public class StartController {
         return "greeting";
     }
     
-    @GetMapping("/home_search")
-    public String home_searchpage(Model model) {
-        
-        return "home_search";
-    }
+//    @GetMapping("/home_search")
+//    public String home_searchpage(Model model) {
+//        
+//        return "home_search";
+//    }
     
     
     
