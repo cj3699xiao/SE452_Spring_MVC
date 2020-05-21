@@ -27,7 +27,7 @@ public class AddressRepositoryTest {
     @Test
     public void testFindAll() {
         int numOfRows = repository.findAll().size();
-        final int EXPECTED_NUM_OF_ROWS = 1;
+        final int EXPECTED_NUM_OF_ROWS = 2;
         assertEquals(numOfRows, EXPECTED_NUM_OF_ROWS);
     }
     
