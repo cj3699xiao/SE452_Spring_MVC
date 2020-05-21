@@ -47,7 +47,9 @@ create table orders (
 );
 
 create table shoes (
---	productID long?
+    productID int primary key auto_increment,
+    brand varchar(20),
+    brandID varchar(50),
 	color varchar(20),
 	size double,
 	price double

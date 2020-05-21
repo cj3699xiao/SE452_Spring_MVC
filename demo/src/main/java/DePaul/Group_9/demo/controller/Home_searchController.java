@@ -17,13 +17,15 @@ import DePaul.Group_9.demo.repository.ShoesRepository;
 @RequestMapping("/search_address")
 public class Home_searchController {
 	@Autowired
-	private AddressRepository repo;
+	private ShoesRepository repo;
+//	private AddressRepository repo;
 	
 	
     @PostMapping
     public String home_searchpage1(Model model) {
     	
-        model.addAttribute("address",repo.findAll());
+//      model.addAttribute("address",repo.findAll());
+    	model.addAttribute("shoes",repo.findAll());
         return "shoe/list";
 //    	return "home_search";
     }

@@ -13,21 +13,26 @@
             <table id="airportList" class="table">
                 <thead>
                     <tr>
-                        <th scope="col"> state </th>
-                        <th scope="col"> city </th>
-                        <th scope="col"> street_apt </th>
-                        <th scope="col"> zipcode </th>
+                        <th scope="col"> productID </th>
+                        <th scope="col"> brand </th>
+                        <th scope="col"> brandID </th>
+                        <th scope="col"> color </th>
+                        <th scope="col"> size </th>
+                        <th scope="col"> price </th>
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:if="${address.empty}">
+                    <tr th:if="${shoes.empty}">
                         <td colspan="2"> No Airports Available </td>
                     </tr>
-                    <tr th:each="address : ${address}">
-                        <td span th:text="${address.state}"></td>
-               			<td span th:text="${address.city}"></td>
-               			<td span th:text="${address.street_apt}"></td>
-               			<td span th:text="${address.zipcode}"></td>
+                    <tr th:each="shoes : ${shoes}">
+                        <td span th:text="${shoes.productID}"></td>
+               			<td span th:text="${shoes.brand}"></td>
+               			<td span th:text="${shoes.brandID}"></td>
+               			<td span th:text="${shoes.color}"></td>
+               			<td span th:text="${shoes.size}"></td>
+               			<td span th:text="${shoes.price}"></td>
                        
                     </tr>                                                
                 </tbody>
