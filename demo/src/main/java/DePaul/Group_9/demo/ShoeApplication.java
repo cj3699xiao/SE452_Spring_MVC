@@ -15,6 +15,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import DePaul.Group_9.demo.model.Address;
 import DePaul.Group_9.demo.repository.AddressRepository;
 //import edu.depaul.cdm.se452.demo.repository.FlightRepository;
+import DePaul.Group_9.demo.repository.ShoesRepository;
 
 
 @SpringBootApplication
@@ -37,7 +38,7 @@ public class ShoeApplication {
 //	private String userId;
 //	
 	@Bean
-	public CommandLineRunner demo(AddressRepository repo) {
+	public CommandLineRunner demo(ShoesRepository repo) {
 		return (args) ->{
 			System.out.println("Address found with findAll():");
 			repo.findAll().forEach((a) -> {
