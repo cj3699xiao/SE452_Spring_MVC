@@ -7,34 +7,28 @@
     <body>
         <div th:replace="/fragments/header :: header"></div>        
         <div class="col-md-6">
-            <input type="text" id="searchValue" onkeyup="airportSearcher()" placeholder="Search..">
-            <a class="btn btn-success" href="#" th:href="@{/airport(add)}"> Add Airport </a>
+           
         </div>
         <div>
             <table id="airportList" class="table">
                 <thead>
                     <tr>
-                        <th scope="col"> Code </th>
-                        <th scope="col"> City State </th>
-                        <th scope="col"> Flights </th>
-                        <th scope="col"> Action </th>
+                        <th scope="col"> state </th>
+                        <th scope="col"> city </th>
+                        <th scope="col"> street_apt </th>
+                        <th scope="col"> zipcode </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:if="${airports.empty}">
+                    <tr th:if="${address.empty}">
                         <td colspan="2"> No Airports Available </td>
                     </tr>
-                    <tr th:each="airport : ${airports}">
-                        <td span th:text="${airport.code}"></td>
-                        <td th:text="${airport.cityState}"></td>
-                        <td>
-                            <a class="btn btn-info" th:href="@{/flight(arrivals,airportId=${airport.id})}"> Arrivals</a>
-                            <a class="btn btn-warning" th:href="@{/flight(departures,airportId=${airport.id})}"> Departures</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-primary" th:href="@{/airport(edit,code=${airport.code})}"> Edit </a>
-                            <a class="btn btn-danger" th:href="@{/airport(delete,id=${airport.id})}"> Delete </a>
-                        </td>
+                    <tr th:each="address : ${address}">
+                        <td span th:text="${address.state}"></td>
+               			<td span th:text="${address.city}"></td>
+               			<td span th:text="${address.street_apt}"></td>
+               			<td span th:text="${address.zipcode}"></td>
+                       
                     </tr>                                                
                 </tbody>
             </table>            

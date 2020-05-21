@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 import DePaul.Group_9.demo.model.Address;
+import DePaul.Group_9.demo.repository.AddressRepository;
+//import edu.depaul.cdm.se452.demo.repository.FlightRepository;
 
 
 @SpringBootApplication
@@ -34,14 +36,29 @@ public class ShoeApplication {
 //	@Value("${userid}")
 //	private String userId;
 //	
-//	@Bean
-//	public CommandLineRunner demo() {
-//		return (args) ->{
-//			System.out.println("-----");
-//			System.out.println(userId);
-//			System.out.println("-----");
-//		};
-//		
-//	}
+	@Bean
+	public CommandLineRunner demo(AddressRepository repo) {
+		return (args) ->{
+			System.out.println("Address found with findAll():");
+			repo.findAll().forEach((a) -> {
+				System.out.println(a.toString());
+           });
+		};
+		
+	}
+	
+	
+//	  //@Bean
+//    public CommandLineRunner demo(FlightRepository repository) {
+//        return (args) -> {
+//            // fetch all customers
+//            log.info("Flights found with findAll():");
+//            log.info("-------------------------------");
+//            repository.findAll().forEach((flight) -> {
+//                log.info(flight.toString());
+//            });
+//            log.info("");
+//        };
+//    }
 	
 }

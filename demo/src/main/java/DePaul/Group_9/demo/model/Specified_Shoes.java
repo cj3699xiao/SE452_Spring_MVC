@@ -5,7 +5,7 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Data
+//@Data
 @Table(name = "shoes_special")
 public class Specified_Shoes extends Shoes { 
 	private long productID;
