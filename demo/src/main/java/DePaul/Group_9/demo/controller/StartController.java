@@ -33,6 +33,12 @@ public class StartController {
         return "home_search";
     }
     
+    @GetMapping("/sign_up")
+    public String sign_up_mongo(Model model) {
+        
+        return "sign_up";
+    }
+    
     
     
     

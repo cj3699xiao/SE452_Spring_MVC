@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import DePaul.Group_9.demo.repository.AddressRepository;
+//import DePaul.Group_9.demo.repository.AddressRepository;
 import DePaul.Group_9.demo.repository.ShoesRepository;
 //import edu.depaul.cdm.se452.demo.repository.AirportRepository;
 
 @Controller
-@RequestMapping("/search_address")
+@RequestMapping("/search_allshoes")
 public class Home_searchController {
 	@Autowired
 	private ShoesRepository repo;
