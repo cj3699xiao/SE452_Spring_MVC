@@ -9,20 +9,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 @Table(name = "comments")
+@AllArgsConstructor
 public class Comment implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int commentID;
-	private int userID;
-	private int storeID;
-	private int rating;
-	private String commentWords;
-	private String reply;
-	private Date commentTime;
+	int userID;
+	int storeID;
+	int rating;
+	String commentWords;
+	String reply;
 //	private boolean like_dislike;
 }

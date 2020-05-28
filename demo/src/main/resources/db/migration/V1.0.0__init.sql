@@ -17,8 +17,7 @@ create table comments (
 	storeID int,
 	rating int,
 	commentWords varchar(300),
-	reply varchar(300),
-	Data  int
+	reply varchar(300)
 );
 
 create table items (

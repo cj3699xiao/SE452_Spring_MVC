@@ -33,6 +33,13 @@ public class StartController {
         return "home_search";
     }
     
+
+    @GetMapping("/comment_search")
+    public String comment_searchpage(Model model) {
+        
+        return "comment_search";
+    }
+    
     
     
     
