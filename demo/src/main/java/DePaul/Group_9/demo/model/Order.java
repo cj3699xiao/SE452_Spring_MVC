@@ -1,7 +1,6 @@
 package DePaul.Group_9.demo.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.*;
 
@@ -9,20 +8,16 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "orders")
+@Table(name = "all_orders")
 public class Order implements Serializable {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int orderID;
-	@OneToMany(mappedBy = "itemID")
-	private List<Item> items ;
-	private int customerID;
-	private int storeID;
-	@JoinColumn(name="id", nullable = false)
-	private Address Customer_adrs;
-	@JoinColumn(name="id", nullable = false)
-	private Address Merchant_adrs;
-	private float order_price;
-	private String payment_method;
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	private long orderID;
+	private long customerID;
+	private long storeID;
+	private long customeraddressID;
+	private long merchantaddressID;
+	private double orderprice;
+	private String paymentmethod;
 	
 }

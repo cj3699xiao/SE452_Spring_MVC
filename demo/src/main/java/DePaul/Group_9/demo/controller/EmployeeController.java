@@ -44,8 +44,8 @@ public class EmployeeController {
 	}
 
 	@PostMapping("/save")
-	public Boolean save(@RequestBody Employee e) {
+	public String save(@RequestBody Employee e) {
 		er.save(e);
-		return Boolean.TRUE;
+		return "Register Successful !";
 	}
 }

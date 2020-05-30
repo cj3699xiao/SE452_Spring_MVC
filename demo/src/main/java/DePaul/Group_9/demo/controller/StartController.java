@@ -39,7 +39,17 @@ public class StartController {
         return "sign_up";
     }
     
+    @GetMapping("/userInformation")
+    public String userInformation_mongo(Model model) {
+        
+        return "userInformation";
+    }
     
+    @GetMapping("/add_order")
+    public String add_order(Model model) {
+        
+        return "add_order";
+    }
     
     
 }
