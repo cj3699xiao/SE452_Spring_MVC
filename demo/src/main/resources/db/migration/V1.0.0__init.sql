@@ -35,15 +35,14 @@ create table merchants (
 	rating int
 );
 
-create table orders (
-	orderID int,
---	items ??
-	customerID int,
-	storeID int,
---  customer_adrs & merchant_adrs
-	rating int,
-	order_price double,
-	payment_method varchar(100)
+create table all_orders (
+	orderID Bigint primary key auto_increment,
+	customerID Bigint,
+	storeID Bigint,
+	customeraddressID Bigint,
+	merchantaddressID Bigint,
+	orderprice double,
+	paymentmethod varchar(100)
 );
 
 create table shoes (

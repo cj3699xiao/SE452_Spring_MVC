@@ -13,14 +13,18 @@
   
     <p> 
         <!-- Making a text input -->
-        <input type="text" id="name" placeholder="Your name"> 
-        <input type="email" id="email" placeholder="Email"> 
+        <p><input type="text" id="name" placeholder="Your name"></p>
+        <p><input type="text" id="password" placeholder="Your password"></p>
+        <p><input type="text" id="address" placeholder="Your address"></p> 
+        <p><input type="email" id="email" placeholder="Your Email"></p>
           
         <!-- Button to send data -->
         <button onclick="sendJSON()">Submit</button> 
+        <p><a href="/userInformation">Show Users</a></p>
   		<!-- <a href="..\home.html">user list</a> -->
       <!-- For printing result from server -->
       <p class="result" style="color:green"></p> 
+      <p id="userList"></p>
       
    </p> 
   

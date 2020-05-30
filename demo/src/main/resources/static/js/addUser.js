@@ -2,6 +2,8 @@ function sendJSON(){
                
             let result = document.querySelector('.result'); 
             let name = document.querySelector('#name'); 
+            let password = document.querySelector('#password'); 
+            let address = document.querySelector('#address'); 
             let email = document.querySelector('#email'); 
                
             // Creating a XHR object 
@@ -25,7 +27,12 @@ function sendJSON(){
             }; 
   
             // Converting JSON data to string 
-            var data = JSON.stringify({ "name": name.value}); 
+            var data = JSON.stringify({ 
+            	"name": name.value,
+            	"password": password.value,
+            	"address": address.value,
+            	"email": email.value,
+            	}); 
   
             // Sending data with the request 
             xhr.send(data); 
