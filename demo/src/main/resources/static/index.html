@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Getting Started: Serving Web Content</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link href="css/custom.css" rel="stylesheet">
-        <script src="js/custom.js"></script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     </head>
     <body>
-        <ol>
-            <li><a href="/hello">Welcome Page</a></li>
-            <li><a href="/home_search">Search Engineer</a></li>
-            <li><a href="/user">Sign Up Form</a></li>
-            <li><a href="/sign_up">Sign_up_mongo</a></li>
-            
+    	 <div class="index_Page" style = "text-align:center; color: blue;">
+                    <h1><a th:href="@{/}">Welcome to Online Shoe Shop</a></h1>
+        </div>
+         
+        <div class="jumbotron" style = "text-align:center;">
+            <h1 class="display-4"><p th:text="'Hello, ' + ${name} + '!'" /></h1>
+        	<h1 class="display-4">Hello, Guest!</h1>
+            <p class="lead">Try a normal way to shop your shoes</p>
+        </div>    
+        </div>   
+        
+       
+        <ol style = "text-align:center;">
+            <a href="/home_search">Shoes</a>
+            <br></br>
+            <a href="/sign_up">Sign_up</a>
+            <br></br>
+            <a href="/add_order">Order page</a>
+            <br></br>
+            <br></br>
+            <br></br>
+        
         </ol>
+
+          <div class="footer-bar" style = "text-align:center;">
+                    &copy; 2020_SE452_Spring Group9 depaul.edu
+          </div>
     </body>
 </html>

@@ -13,16 +13,37 @@
 	<body>
 		<div th:replace="fragments/header ::header"></div>
 		<br></br>
-		 <form action="#" th:action="@{search_allshoes}" th:object="${search_allshoes}" method="post">
-		 	<div class="row form-group">
-               <div class="col-lg-6"> 
+		 <form action="#" th:action="@{search_allshoes}" th:object="${search_allshoes}" method="get" >
+		 	<div  style = "text-align:center;">
+               
                		
 					<span>Tell us about the Shoe: <span><input type="search" name="search1"/>
 					<input type="submit" value = "Show All" />
 					
-				</div>
+				
 			</div>
 		</form>
+		<br></br>
+        <br></br>
+		
+		 <ol style = "text-align:center;">
+        
+            <br></br>
+   	        <form action="#" th:action="@{search_allshoes}" th:object="${search_allshoes}" method="get" >
+		 	   <div  style = "text-align:center;">
+               
+               		
+				
+					<input type="submit" value = "Show all available shoes" />
+					
+				
+			   </div>
+		    </form>
+          
+            <br></br>
+              <a href="/add_order"><input type="submit" value = "Create a new order" /></a>
+        
+        </ol>
 		
 	<div th:replace="fragments/footer :: footer"></div>
 	</body>

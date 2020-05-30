@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <tr th:if="${shoes.empty}">
-                        <td colspan="2"> No Airports Available </td>
+                        <td colspan="2"> No Shoes Available </td>
                     </tr>
                     <tr th:each="shoes : ${shoes}">
                         <td span th:text="${shoes.productID}"></td>
