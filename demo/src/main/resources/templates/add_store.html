@@ -8,18 +8,18 @@
   
   <body style="text-align:center;" id="body"> 
     <h1 style="color:green;"> 
-      add Comment
+      add Store
     </h1> 
   
-    <p> 
-        <!-- Making a text input -->
+    <p>
+          <!-- Making a text input -->
         <!-- <form method="post" action="/order/save" enctype="application/json"> -->
         
-	        <p><input type="number" id="userID" placeholder="userID"></p>
-	        <p><input type="number" id="storeID" placeholder="storeID"></p>
+	        <p><input type="text" id="storename" placeholder="storename"></p>
+	        <p><input type="text" id="storeemail" placeholder="storeemail"></p>
+	        <p><input type="text" id="phone" placeholder="phone"></p>
+	        <p><input type="number" id="commentID" placeholder="commentID"></p>
 	        <p><input type="number" id="rating" placeholder="rating"></p>
-	        <p><input type="text" id="commentwords" placeholder="commentwords"></p>
-	        
 	        <button onclick="sendJSON()">Submit</button> 
 	        
         <!-- </form> -->
@@ -30,10 +30,13 @@
       <!-- For printing result from server -->
       <p class="result" style="color:green"></p> 
       
-   </p> 
+    
+     </p> 
+  
+   
   
   <!-- Include the JavaScript file -->
-  <script src="js/add_comment.js"></script>
+  <script src="js/add_store.js"></script>
   
   </body> 
 </html> 

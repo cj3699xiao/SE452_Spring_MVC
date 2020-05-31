@@ -3,26 +3,21 @@ package DePaul.Group_9.demo.model;
 import java.io.Serializable;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "shoestype")
-public class ShoesType implements Serializable { 
-
+@Table(name = "all_shoes_type")
+public class ShoesType implements Serializable {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long ShoesNameID;
-	
-	private String ShoesName;
-	@Min(0)
-	@Max(2)
-	private int crowd;
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	private long shoestypeID;
+	private long shoesnameID;
+	private long storeID;
+	private long crowd;
 	private String style;
+	private String shoesname;
 	private String brand;
 	private String material;
-	
 }

@@ -1,13 +1,15 @@
 function sendJSON(){ 
                
             let result = document.querySelector('.result'); 
-            let userID = document.querySelector('#userID'); 
-            let storeID = document.querySelector('#storeID'); 
-            let rating = document.querySelector('#rating'); 
-            let commentwords = document.querySelector('#commentwords');              
+            let state = document.querySelector('#state'); 
+            let city = document.querySelector('#city'); 
+            let streetapt = document.querySelector('#streetapt'); 
+            let zipcode = document.querySelector('#zipcode'); 
+
+               
             // Creating a XHR object 
             let xhr = new XMLHttpRequest(); 
-            let url = "/comments/save"; 
+            let url = "/address/save"; 
         
             // open a connection 
             xhr.open("POST", url, true); 
@@ -23,14 +25,14 @@ function sendJSON(){
   
                 } 
             }; 
-            
+  
             // Converting JSON data to string 
             var data = JSON.stringify({ 
-            	"userID": userID.value,
-            	"storeID": storeID.value,
-            	"rating": rating.value,
-            	"commentwords": commentwords.value,
-            	"likesdislike": 2
+            	"result": result.value,
+            	"state": state.value,
+            	"city": city.value,
+            	"streetapt": streetapt.value,
+            	"zipcode": zipcode.value,
             	}); 
   
             // Sending data with the request 

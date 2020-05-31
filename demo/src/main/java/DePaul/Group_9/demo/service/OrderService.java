@@ -16,16 +16,16 @@ public class OrderService {
 	@Autowired
 	private OrderRepository orderRepository;
 	
-	public List<Order> findByAddress(Address address){
-		List<Order> allOrders = orderRepository.findAll();
-		List<Order> result = new ArrayList<Order>();
-		for(Order o : allOrders) {
-			if (o.getCustomeraddressID() == address.getId()) {
-				result.add(o);
-			}
-		}
-		return result;
-	}
+//	public List<Order> findByAddress(Address address){
+//		List<Order> allOrders = orderRepository.findAll();
+//		List<Order> result = new ArrayList<Order>();
+//		for(Order o : allOrders) {
+//			if (o.getCustomeraddressID() == address.getId()) {
+//				result.add(o);
+//			}
+//		}
+//		return result;
+//	}
 	
 	public List<Order> findAll(){
 		return orderRepository.findAll();

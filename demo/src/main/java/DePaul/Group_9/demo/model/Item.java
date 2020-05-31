@@ -8,19 +8,15 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "items") 
-public class Item implements Serializable{
+@Table(name = "items")
+public class Item implements Serializable {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int itemID;
-	int quantity;
-	String note;
-	@OneToOne
-	@JoinColumn(name="productID", nullable = false)
-	Shoes shoes;
-	
-	@ManyToOne
-	@JoinColumn(name="storeID", nullable = false)
-	Store store;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	private long itemID;
+	private long shoesID;
+	private long storeID;
+	private long orderID;
+	private long customerID;
+	private int quantity;
+	private String note;
 }

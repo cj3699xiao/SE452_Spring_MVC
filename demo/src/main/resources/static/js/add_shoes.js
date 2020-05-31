@@ -1,13 +1,18 @@
 function sendJSON(){ 
                
             let result = document.querySelector('.result'); 
-            let userID = document.querySelector('#userID'); 
-            let storeID = document.querySelector('#storeID'); 
-            let rating = document.querySelector('#rating'); 
-            let commentwords = document.querySelector('#commentwords');              
+            let productID = document.querySelector('#productID'); 
+            let color = document.querySelector('#color'); 
+            let size = document.querySelector('#size'); 
+            let price = document.querySelector('#price'); 
+            let itemID = document.querySelector('#itemID'); 
+            let shoestypeID = document.querySelector('#shoestypeID'); 
+
+
+               
             // Creating a XHR object 
             let xhr = new XMLHttpRequest(); 
-            let url = "/comments/save"; 
+            let url = "/shoes/save"; 
         
             // open a connection 
             xhr.open("POST", url, true); 
@@ -23,14 +28,15 @@ function sendJSON(){
   
                 } 
             }; 
-            
+  
             // Converting JSON data to string 
             var data = JSON.stringify({ 
-            	"userID": userID.value,
-            	"storeID": storeID.value,
-            	"rating": rating.value,
-            	"commentwords": commentwords.value,
-            	"likesdislike": 2
+            	"productID": productID.value,
+            	"color": color.value,
+            	"size": size.value,
+            	"price": price.value,
+            	"itemID": itemID.value,
+            	"shoestypeID": shoestypeID.value
             	}); 
   
             // Sending data with the request 
