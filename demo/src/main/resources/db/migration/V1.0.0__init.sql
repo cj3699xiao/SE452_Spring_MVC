@@ -38,12 +38,12 @@ create table all_orders (
 
 create table shoes (
 	shoesID Bigint primary key auto_increment,
-	productID Bigint,
+	brand varchar(50),
+	brandseries varchar(50),
 	color varchar(20),
 	size double,
-	price double,
-	itemID Bigint,
-	shoestypeID Bigint
+	price double
+	
 );
 
 create table all_shoes_type (

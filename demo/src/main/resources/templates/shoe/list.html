@@ -10,15 +10,15 @@
            
         </div>
         <div>
-            <table id="airportList" class="table">
+            <table id="ShoesList" class="table">
                 <thead>
                     <tr>
-                        <th scope="col"> productID </th>
-                        <th scope="col"> brand </th>
-                        <th scope="col"> brandID </th>
-                        <th scope="col"> color </th>
-                        <th scope="col"> size </th>
-                        <th scope="col"> price </th>
+                        <th scope="col"> ShoesID </th>
+                        <th scope="col"> Brand </th>
+                        <th scope="col"> Brandseries </th>
+                        <th scope="col"> Color </th>
+                        <th scope="col"> Size </th>
+                        <th scope="col"> Price </th>
                         
                     </tr>
                 </thead>
@@ -27,9 +27,9 @@
                         <td colspan="2"> No Shoes Available </td>
                     </tr>
                     <tr th:each="shoes : ${shoes}">
-                        <td span th:text="${shoes.productID}"></td>
+                        <td span th:text="${shoes.shoesID}"></td>
                			<td span th:text="${shoes.brand}"></td>
-               			<td span th:text="${shoes.brandID}"></td>
+               			<td span th:text="${shoes.brandseries}"></td>
                			<td span th:text="${shoes.color}"></td>
                			<td span th:text="${shoes.size}"></td>
                			<td span th:text="${shoes.price}"></td>

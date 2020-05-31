@@ -9,33 +9,37 @@ import DePaul.Group_9.demo.model.Shoes;
 
 public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
-	List<Shoes> findByProductID(long id);
-	List<Shoes> findByColor(String color);
+	List<Shoes> findByShoesID(long id);
+	List<Shoes> findByBrand(String brand);
+	List<Shoes> findByBrandseries(String brandseries);
+	List<Shoes> findByColor(String color);	
 	List<Shoes> findBySize(double size);
 	List<Shoes> findByPrice(double price);
-	List<Shoes> findByItemID(long id);
-	List<Shoes> findByShoestypeID(long id);
 	
-	boolean existsByProductID(long id);
+	
+	boolean existsByShoesID(long id);
+	boolean existsByBrand(String brand);
+	boolean existsByBrandseries(String brandseries);
 	boolean existsByColor(String color);
 	boolean existsBySize(double size);
 	boolean existsByPrice(double price);
-	boolean existsByItemID(long id);
-	boolean existsByShoestypeID(long id);
 	
-	long countByProductID(long id);
+	
+	long countByShoesID(long id);
+	long countByBrand(String brand);
+	long countByBrandseries(String brandseries);
 	long countByColor(String color);
 	long countBySize(double size);
 	long countByPrice(double price);
-	long countByItemID(long id);
-	long countByShoestypeID(long id);
+
 	
-	void deleteByProductID(long id);
+	void deleteByShoesID(long id);
+	void deleteByBrand(String brand);
+	void deleteByBrandseries(String brandseries);
 	void deleteByColor(String color);
 	void deleteBySize(double size);
 	void deleteByPrice(double price);
-	void deleteByItemID(long id);
-	void deleteByShoestypeID(long id);
+
 	
 	@Override
 	List<Shoes> findAll();	

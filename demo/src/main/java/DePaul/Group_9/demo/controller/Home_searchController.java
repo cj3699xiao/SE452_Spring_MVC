@@ -41,11 +41,11 @@ public class Home_searchController {
 //    	return "home_search";
 	}
 
-	  @GetMapping(params = "add")
-	    public String add(Model model) {
-	        model.addAttribute("airport", new Shoes());
-	        return "shoe/shoe_add_form";
-	    }
+//	  @GetMapping(params = "add")
+//	    public String add(Model model) {
+//	        model.addAttribute("airport", new Shoes());
+//	        return "shoe/shoe_add_form";
+//	    }
 	
 
 //	@GetMapping(path = "/color", params = "red")
