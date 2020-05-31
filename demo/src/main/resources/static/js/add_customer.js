@@ -2,6 +2,7 @@ function sendJSON(){
                
             let result = document.querySelector('.result');  
             let username = document.querySelector('#username'); 
+            let password = document.querySelector('#password'); 
             let email = document.querySelector('#email'); 
             let phone = document.querySelector('#phone'); 
             let rating = document.querySelector('#rating');
@@ -21,7 +22,7 @@ function sendJSON(){
                 if (xhr.readyState === 4 && xhr.status === 200) { 
   
                     // Print received data from server 
-                    result.innerHTML = this.responseText; 
+                	document.getElementById("login").innerHTML = this.responseText; 
   
                 } 
             }; 
@@ -29,6 +30,7 @@ function sendJSON(){
             // Converting JSON data to string 
             var data = JSON.stringify({ 
             	"username": username.value,
+            	"password": password.value,
             	"email": email.value,
             	"phone": phone.value,
             	"rating": rating.value,

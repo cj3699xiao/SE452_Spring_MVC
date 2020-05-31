@@ -46,8 +46,8 @@ public class CustomerController {
 	}
 
 	@PostMapping("/save")
-	public Boolean save(@RequestBody Customer e) {
+	public String save(@RequestBody Customer e) {
 		customerService.save(e);
-		return Boolean.TRUE;
+		return "<a href=\"/customer\">Login</a>";
 	}
 }

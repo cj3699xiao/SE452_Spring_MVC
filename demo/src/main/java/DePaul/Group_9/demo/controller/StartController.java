@@ -99,5 +99,17 @@ public class StartController {
         return "add_customer";
     }
     
+    @GetMapping("/customer")
+    public String customer_login(Model model) {
+        
+        return "customer";
+    }
+    
+    @GetMapping("/merchant")
+    public String merchant_login(Model model) {
+        
+        return "merchant";
+    }
+    
     
 }

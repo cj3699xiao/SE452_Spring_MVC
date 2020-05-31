@@ -12,8 +12,12 @@
     	<div th:replace="fragments/header ::header"></div>
         <div class="jumbotron">
             <h1 class="display-4"><p th:text="'Hello, ' + ${name} + '!'" /></h1>
-        
+        	
             <p class="lead">Try a normal way to shop your shoes</p>
+            
+            <p><a href="/merchant">I want to SELL shoes</a></p>
+            <p><a href="/customer">I want to BUY shoes</a></p>
+            
         </div>    
         </div>   
         <div th:replace="fragments/footer :: footer"></div>

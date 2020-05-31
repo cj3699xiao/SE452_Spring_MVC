@@ -7,22 +7,22 @@
   </head> 
   
   <body style="text-align:center;" id="body"> 
-    <h1 style="color:green;"> 
-      add Item
-    </h1> 
   
+  <div id="content">
+    <h1 style="color:green;"> 
+      Welcome!
+    </h1> 
     <p> 
         <!-- Making a text input -->
         <!-- <form method="post" action="/order/save" enctype="application/json"> -->
         
-	        <p><input type="number" id="shoesID" placeholder="shoesID"></p>
-	        <p><input type="number" id="storeID" placeholder="storeID"></p>
-	        <p><input type="number" id="orderID" placeholder="orderID"></p>
-	        <p><input type="number" id="customerID" placeholder="customerID"></p>
-          <p><input type="number" id="quantity" placeholder="quantity"></p>
-          <p><input type="text" id="note" placeholder="note"></p>
-	        <button onclick="sendJSON()">Submit</button> 
-	        
+          	<p><input type="text" id="username" placeholder="username"></p>
+          	<p><input type="text" id="password" placeholder="password"></p>
+	        <button onclick="sendJSON()">LOGIN</button> 
+	        <p>
+	        	<p>don't have account? </p>
+	        	<a href="/add_merchant">Sign Up</a>
+	        </p>
         <!-- </form> -->
           
         <!-- Button to send data -->
@@ -32,9 +32,11 @@
       <p class="result" style="color:green"></p> 
       
    </p> 
+   </div>
+   <p id="checkup"></p>
   
   <!-- Include the JavaScript file -->
-  <script src="js/add_item.js"></script>
+  <script src="js/merchant_login.js"></script>
   
   </body> 
 </html> 

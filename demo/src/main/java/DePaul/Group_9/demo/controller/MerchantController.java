@@ -46,8 +46,8 @@ public class MerchantController {
 	}
 
 	@PostMapping("/save")
-	public Boolean save(@RequestBody Merchant m) {
+	public String save(@RequestBody Merchant m) {
 		merchantService.save(m);
-		return Boolean.TRUE;
+		return "<a href=\"/merchant\">Login</a>";
 	}
 }
