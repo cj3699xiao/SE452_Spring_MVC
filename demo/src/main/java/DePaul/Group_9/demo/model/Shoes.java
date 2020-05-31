@@ -13,12 +13,13 @@ import lombok.Data;
 public class Shoes implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private long shoesID;
-	private long productID;
+	private long shoesID;	
+	private String brand;
+	private String brandseries;
 	private String color;
 	private double size;
 	private double price;
-	private long itemID;
-	private long shoestypeID;
+	
+	
 	
 }
