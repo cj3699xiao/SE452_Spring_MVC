@@ -1,6 +1,7 @@
 package DePaul.Group_9.demo.model;
 
-import javax.persistence.Entity;
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 import lombok.Data;
@@ -8,10 +9,15 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "merchants")
-public class Merchant extends User {
-	private int[] storeID;  //onetomany?
-	private String personal_email;
-	private int phone;
-	private int rating;//change to int same with comments
+public class Merchant implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long merchantID;
+	private String username;
+	private long storeID;
+	private String personalemail;
+	private String phone;
+	private double rating;
+
 
 }
