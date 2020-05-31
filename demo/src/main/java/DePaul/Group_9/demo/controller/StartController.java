@@ -1,5 +1,7 @@
 package DePaul.Group_9.demo.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,5 +53,9 @@ public class StartController {
         return "add_order";
     }
     
+//    @GetMapping("/setcookie")
+//    public String setCookie(HttpServletResponse response, Model model) {
+//    	Cookie newCookie = new Cookie( "cookieType", "chocalatChip");
+//    }
     
 }
