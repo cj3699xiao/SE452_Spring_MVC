@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title> 
+      JavaScript | Sending JSON data to server. 
+    </title> 
+  </head> 
+  
+  <body style="text-align:center;" id="body"> 
+    <h1 style="color:green;"> 
+      add Order
+    </h1> 
+  
+    <p> 
+        <!-- Making a text input -->
+        <!-- <form method="post" action="/order/save" enctype="application/json"> -->
+        
+	        <p><input type="text" id="username" placeholder="username" required></p>
+	        <p><input type="email" id="email" placeholder="email" pattern="/^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/></p>
+	        <p><input type="text" id="phone" placeholder="phone" required></p>
+	        <p><input type="number" id="rating" placeholder="rating"></p>
+	        <p><input type="text" id="paymentmethod" placeholder="paymentmethod"></p>
+	        <button onclick="sendJSON()">Submit</button> 
+	        
+        <!-- </form> -->
+          
+        <!-- Button to send data -->
+        <!-- <button onclick="sendJSON()">Submit</button>  -->
+  		<!-- <a href="..\home.html">user list</a> -->
+      <!-- For printing result from server -->
+      <p class="result" style="color:green"></p> 
+      
+   </p> 
+  
+  <!-- Include the JavaScript file -->
+  <script src="js/add_customer.js"></script>
+  
+  </body> 
+</html> 

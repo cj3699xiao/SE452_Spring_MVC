@@ -53,9 +53,54 @@ public class StartController {
         return "add_order";
     }
     
-//    @GetMapping("/setcookie")
-//    public String setCookie(HttpServletResponse response, Model model) {
-//    	Cookie newCookie = new Cookie( "cookieType", "chocalatChip");
-//    }
+    @GetMapping("/add_comment")
+    public String add_comment(Model model) {
+        
+        return "add_comment";
+    }
+    
+    @GetMapping("/add_address")
+    public String add_address(Model model) {
+        
+        return "add_address";
+    }
+    
+    @GetMapping("/add_shoes")
+    public String add_shoes(Model model) {
+        
+        return "add_shoes";
+    }
+    
+    @GetMapping("/add_store")
+    public String add_store(Model model) {
+        
+        return "add_store";
+    }
+    
+    @GetMapping("/add_shoestype")
+    public String add_shoestype(Model model) {
+        
+        return "add_shoestype";
+    }
+    
+    @GetMapping("/add_merchant")
+    public String add_merchant(Model model) {
+        
+        return "add_merchant";
+    }
+    
+    @GetMapping("/add_item")
+    public String add_item(Model model) {
+        
+        return "add_item";
+    }
+    
+    @GetMapping("/add_customer")
+    public String add_customer(Model model) {
+        
+        return "add_customer";
+    }
+    
+
     
 }

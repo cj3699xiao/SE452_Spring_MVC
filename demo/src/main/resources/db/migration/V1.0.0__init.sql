@@ -1,38 +1,29 @@
 create table address (
---    auto_increment is with mysql and H2
---    serial is with Postgres
---    id serial primary key,
-    id int primary key auto_increment,
-    state varchar(10),
-    city varchar(10),
-    street_apt varchar(30),
-    zipcode int(5)
-       
+	addressID Bigint primary key auto_increment,
+	state varchar(100),
+	city varchar(100),
+	streetapt varchar(100),
+	zipcode int
 );
 
 
 create table comments (
-	commentID int,
-	userID int,
-	storeID int,
+    commentID Bigint primary key auto_increment,	
+    userID Bigint,
+	storeID Bigint,
 	rating int,
-	commentWords varchar(300),
-	reply varchar(300),
-	Data  int
+	commentwords varchar(100),
+	likesdislike int
 );
 
 create table items (
-	itemID int,
+	itemID Bigint primary key auto_increment,
+	shoesID Bigint,
+	storeID Bigint,
+	orderID Bigint,
+	customerID Bigint,
 	quantity int,
-	note varchar(300)
---  not sure about Shoes& store
-);
-
-create table merchants (
---	storeID int[],
-	personal_email varchar(30),
-	phone int,
-	rating int
+	note varchar(100)
 );
 
 create table all_orders (
@@ -46,41 +37,51 @@ create table all_orders (
 );
 
 create table shoes (
-    productID int primary key auto_increment,
-    brand varchar(20),
-    brandID varchar(50),
+	shoesID Bigint primary key auto_increment,
+	productID Bigint,
 	color varchar(20),
 	size double,
-	price double
---  shoestype?
+	price double,
+	itemID Bigint,
+	shoestypeID Bigint
 );
 
-create table shoestype (
---	ShoesNameID long?
-
-	ShoesName varchar(20),
-	
-	crowd int,  
--- what is this?
-
-	style varchar(20),
-	brand varchar(20),
-	material varchar(20)
+create table all_shoes_type (
+	shoestypeID Bigint primary key auto_increment,
+	shoesnameID Bigint,
+	storeID Bigint,
+	crowd Bigint,
+	shoesname varchar(100),
+	style varchar(100),
+	brand varchar(100),
+	material varchar(100)
 );
 
-create table shoes_special (
---	productID long?
-	extraPrice double,
-	description varchar(300)
+create table merchants (
+	merchantID Bigint primary key auto_increment,
+	username varchar(100),
+	storeID Bigint,
+	personalemail varchar(50),
+	phone varchar(20),
+	rating double
 );
 
 create table stores (
-	storeID int,
-	store_name varchar(20),
-	store_email varchar(50),
-	phone int,
-	ratring double
---  shoes_on_sale?
+	storeID Bigint primary key auto_increment,
+	storename varchar(50),
+	storeemail varchar(50),
+	phone varchar(20),
+	commentID Bigint,
+	rating double
+);
+
+create table customers (
+	customerID Bigint primary key auto_increment,
+	username varchar(100),
+	paymentmethod varchar(50),
+	email varchar(50),
+	phone varchar(20),
+	rating double
 );
 
 create table User (
