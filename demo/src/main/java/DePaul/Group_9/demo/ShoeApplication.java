@@ -37,16 +37,16 @@ public class ShoeApplication {
 //	@Value("${userid}")
 //	private String userId;
 //	
-	@Bean
-	public CommandLineRunner demo(ShoesRepository repo) {
-		return (args) ->{
-			System.out.println("Address found with findAll():");
-			repo.findAll().forEach((a) -> {
-				System.out.println(a.toString());
-           });
-		};
-		
-	}
+//	@Bean
+//	public CommandLineRunner demo(ShoesRepository repo) {
+//		return (args) ->{
+//			System.out.println("Address found with findAll():");
+//			repo.findAll().forEach((a) -> {
+//				System.out.println(a.toString());
+//           });
+//		};
+//		
+//	}
 	
 	
 //	  //@Bean

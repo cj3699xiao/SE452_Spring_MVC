@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title> 
+      JavaScript | Sending JSON data to server. 
+    </title> 
+  </head> 
+  
+  <body style="text-align:center;" id="body"> 
+    <h1 style="color:green;"> 
+      add Shoes Type
+    </h1> 
+  
+    <p> 
+        <!-- Making a text input -->
+        <!-- <form method="post" action="/order/save" enctype="application/json"> -->
+        
+	        <p><input type="number" id="shoesnameID" placeholder="shoesnameID"></p>
+	        <p><input type="number" id="storeID" placeholder="storeID"></p>
+	        <p><input type="number" id="crowd" placeholder="crowd"></p>
+	        <p><input type="text" id="style" placeholder="style"></p>
+          <p><input type="text" id="shoesname" placeholder="shoesname"></p>
+          <p><input type="text" id="brand" placeholder="brand"></p>
+          <p><input type="text" id="material" placeholder="material"></p>
+	        <button onclick="sendJSON()">Submit</button> 
+	        
+        <!-- </form> -->
+          
+        <!-- Button to send data -->
+        <!-- <button onclick="sendJSON()">Submit</button>  -->
+  		<!-- <a href="..\home.html">user list</a> -->
+      <!-- For printing result from server -->
+      <p class="result" style="color:green"></p> 
+      
+   </p> 
+  
+  <!-- Include the JavaScript file -->
+  <script src="js/add_shoestype.js"></script>
+  
+  </body> 
+</html> 
