@@ -7,23 +7,22 @@
   </head> 
   
   <body style="text-align:center;" id="body"> 
-    <h1 style="color:green;"> 
-      add Merchant
-    </h1> 
   
-    <p>
-            <!-- Making a text input -->
+  <div id="content">
+    <h1 style="color:green;"> 
+      Welcome!
+    </h1> 
+    <p> 
+        <!-- Making a text input -->
         <!-- <form method="post" action="/order/save" enctype="application/json"> -->
         
-	        <p><input type="text" id="username" placeholder="username"></p>
-	        <p><input type="text" id="password" placeholder="password"></p>
-	        <p><input type="number" id="storeID" placeholder="storeID"></p>
-	        <p><input type="text" id="personalemail" placeholder="personalemail"></p>
-	        <p><input type="text" id="phone" placeholder="phone"></p>
-	        <p><input type="number" id="rating" placeholder="rating"></p>
-	        <button onclick="sendJSON()">Submit</button> 
-	        <p id="login"></p>
-	        
+          	<p><input type="text" id="username" placeholder="username"></p>
+          	<p><input type="text" id="password" placeholder="password"></p>
+	        <button onclick="sendJSON()">LOGIN</button> 
+	        <p>
+	        	<p>don't have account? </p>
+	        	<a href="/add_merchant">Sign Up</a>
+	        </p>
         <!-- </form> -->
           
         <!-- Button to send data -->
@@ -31,13 +30,13 @@
   		<!-- <a href="..\home.html">user list</a> -->
       <!-- For printing result from server -->
       <p class="result" style="color:green"></p> 
-    </p> 
-
       
- 
+   </p> 
+   </div>
+   <p id="checkup"></p>
   
   <!-- Include the JavaScript file -->
-  <script src="js/add_merchant.js"></script>
+  <script src="js/merchant_login.js"></script>
   
   </body> 
 </html> 

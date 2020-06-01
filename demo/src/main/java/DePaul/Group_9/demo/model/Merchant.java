@@ -14,6 +14,7 @@ public class Merchant implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long merchantID;
 	private String username;
+	private String password;
 	private long storeID;
 	private String personalemail;
 	private String phone;

@@ -60,6 +60,7 @@ create table all_shoes_type (
 create table merchants (
 	merchantID Bigint primary key auto_increment,
 	username varchar(100),
+	password varchar(20),
 	storeID Bigint,
 	personalemail varchar(50),
 	phone varchar(20),
@@ -78,6 +79,7 @@ create table stores (
 create table customers (
 	customerID Bigint primary key auto_increment,
 	username varchar(100),
+	password varchar(20),
 	paymentmethod varchar(50),
 	email varchar(50),
 	phone varchar(20),

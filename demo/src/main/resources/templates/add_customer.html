@@ -16,12 +16,12 @@
         <!-- <form method="post" action="/order/save" enctype="application/json"> -->
         
 	        <p><input type="text" id="username" placeholder="username" required></p>
+	        <p><input type="text" id="password" placeholder="password" required></p>
 	        <p><input type="email" id="email" placeholder="email" pattern="/^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/></p>
 	        <p><input type="text" id="phone" placeholder="phone" required></p>
-	        <p><input type="number" id="rating" placeholder="rating"></p>
 	        <p><input type="text" id="paymentmethod" placeholder="paymentmethod"></p>
 	        <button onclick="sendJSON()">Submit</button> 
-	        
+	        <p id="login"></p>
         <!-- </form> -->
           
         <!-- Button to send data -->
