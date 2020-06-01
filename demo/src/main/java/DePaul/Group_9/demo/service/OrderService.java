@@ -36,16 +36,22 @@ public class OrderService {
 		return orderRepository.findById(id);
 	}
 	
-	public List<Order> findByName(String name){
-		long id = customerRepository.findByUsername(name).get(0).getCustomerID();
-		return orderRepository.findByCustomerID(id);
-	}
+//	public List<Order> findByName(String name){
+//		long id = customerRepository.findByUsername(name).get(0).getCustomerID();
+//		return orderRepository.findByCustomerID(id);
+//	}
 	
 	public void deleteById(long id) {
 		orderRepository.deleteById(id);
 	}
 	
-	public void save(Order order) {
-		orderRepository.save(order);
+	public boolean save(Order order) {
+		if(orderRepository.existsByShoesID(order.getShoesID())) {
+			return false;
+		}
+		else {
+			orderRepository.save(order);
+			return true;
+		}
 	}
 }

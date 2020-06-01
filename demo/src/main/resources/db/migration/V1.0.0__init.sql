@@ -28,12 +28,13 @@ create table items (
 
 create table all_orders (
 	orderID Bigint primary key auto_increment,
-	customerID Bigint,
-	storeID Bigint,
-	customeraddressID Bigint,
-	merchantaddressID Bigint,
-	orderprice double,
-	paymentmethod varchar(100)
+	shoesID Bigint
+--	customerID Bigint,
+--	storeID Bigint,
+--	customeraddressID Bigint,
+--	merchantaddressID Bigint,
+--	orderprice double,
+--	paymentmethod varchar(100)
 );
 
 create table shoes (

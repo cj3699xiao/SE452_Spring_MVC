@@ -13,10 +13,26 @@
   	<!-- <p id="username" th:text="${name}"/> -->
   	<p>
 	  <p>
-	    <input type="text" id="search_bar" placeholder="search_bar">
+	    <input type="text" id="search_bar" placeholder="search shoes">
 	    <button onclick="search()">Search</button>
 	  </p>
-      <table id="result" class="table" border="1"></table> 
+      <table id="result" class="table" border="1" style="border:1px solid black;margin-left:auto;margin-right:auto;"></table> 
+      
+      <h1 style="color:green;"> 
+      add Order
+    </h1> 
+  
+    <p> 
+	        <p><input type="number" id="shoesID" placeholder="shoesID"></p>
+	        <button onclick="sendJSON()">Submit</button> 
+      		<p class="result" style="color:green"></p> 
+      
+   </p> 
+   <table id="result" class="table" border="1" style="border:1px solid black;margin-left:auto;margin-right:auto;"></table> 
+      
+  
+  <!-- Include the JavaScript file -->
+  		<script src="js/add_order.js"></script>
 
 	  <script src="js/search_shoes.js"></script>
   </p>

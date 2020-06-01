@@ -23,30 +23,7 @@ xhr1.onreadystatechange = function () {
 	} 
 }; 
 
-//var httpRequest = new XMLHttpRequest();
-//var url2 = "/order/findByName/" + document.getElementsById('username');
-//httpRequest.open('GET', url2, true);
-//
-//httpRequest.send();
-//
-//httpRequest.onreadystatechange = function () {
-//    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-//        var json = httpRequest.responseText;
-//        var rows = JSON.parse(json);
-//        
-//        var table = document.getElementsByTagName('table')[1];
-//		for (var j = 0; j < rows.length; j++) {
-//			var tr = document.createElement('tr');
-//			var temp = rows[j];
-//			for ( var i in temp) {
-//				var th = document.createElement('th');
-//				tr.appendChild(th);
-//				th.innerHTML = temp[i];
-//			}
-//			table.appendChild(tr);
-//		}	
-//    }
-//};
+
 
 //
 function search(){ 

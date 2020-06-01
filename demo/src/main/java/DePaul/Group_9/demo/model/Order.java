@@ -13,11 +13,12 @@ public class Order implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private long orderID;
-	private long customerID;
-	private long storeID;
-	private long customeraddressID;
-	private long merchantaddressID;
-	private double orderprice;
-	private String paymentmethod;
+	private long shoesID;
+//	private long customerID;
+//	private long storeID;
+//	private long customeraddressID;
+//	private long merchantaddressID;
+//	private double orderprice;
+//	private String paymentmethod;
 	
 }
