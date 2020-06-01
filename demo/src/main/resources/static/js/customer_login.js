@@ -21,7 +21,7 @@ function sendJSON(){
                     	document.getElementById("wrong").innerHTML = "Wrong username or password";
                     }
                     else {
-	                	document.getElementById("address").innerHTML = tr + "/" + username.value;
+	                	document.getElementById("address").innerHTML = tr;// + "/" + username.value;
 	                	window.location.href = document.getElementById("address").innerHTML;
                     }
   
