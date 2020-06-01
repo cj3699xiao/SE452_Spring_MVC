@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import DePaul.Group_9.demo.model.Merchant;
+import DePaul.Group_9.demo.model.Order;
 import DePaul.Group_9.demo.service.MerchantService;
+import DePaul.Group_9.demo.service.OrderService;
 
 @RestController
 @RequestMapping("/merchant")
@@ -22,6 +24,9 @@ public class MerchantController {
 	
 	@Autowired
 	private MerchantService merchantService;
+	
+	@Autowired
+	private OrderService orderService;
 	
 	@DeleteMapping("/delete/{id}")
 	public Boolean delete(@PathVariable int id) {
@@ -44,6 +49,11 @@ public class MerchantController {
 	public List<Merchant> find(){
 		return merchantService.findAll();
 	}
+	
+//	@GetMapping("/list_orders")
+//	public List<Order> find_orders(){
+//		return orderService.findAll();
+//	}
 
 	@PostMapping("/save")
 	public String save(@RequestBody Merchant m) {

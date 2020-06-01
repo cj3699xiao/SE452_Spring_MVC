@@ -18,7 +18,7 @@ public class LoginController {
 	@GetMapping("/merchant/{username}/{password}")
 	public String merchantLogin(@PathVariable String username, @PathVariable String password) {
 		if(loginservice.merchantLogin(username, password)) {
-			return "add_shoes";
+			return "merchant_page";
 		}
 		else
 			return "merchant";
