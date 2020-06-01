@@ -21,39 +21,39 @@ import DePaul.Group_9.demo.service.OrderService;
 public class OrderController {
 	
 	@Autowired
-	private OrderService orederService;
+	private OrderService orderService;
 	
 	@DeleteMapping("/delete/{id}")
 	public Boolean delete(@PathVariable int id) {
-		orederService.deleteById(id);
+		orderService.deleteById(id);
 		return Boolean.TRUE;
 	}
 	 
 	@GetMapping("/findById/{id}")
 	public Optional<Order> findById(@PathVariable int id) {
-		return 	orederService.findById(id);
+		return 	orderService.findById(id);
 	}
 	
  
-	@GetMapping("/findByName/{name}")
-	public List<Order> findByName(@PathVariable String name) {
-		return 	orederService.findByName(name);
-	}
+//	@GetMapping("/findByName/{name}")
+//	public List<Order> findByName(@PathVariable String name) {
+//		return 	orderService.findByName(name);
+//	}
 	
 	@PutMapping("/update")
 	public Boolean update(@RequestBody Order e) {
-		orederService.save(e);
+		orderService.save(e);
 		return Boolean.TRUE;
 	}
 	
 	@GetMapping("/list")
 	public List<Order> find(){
-		return orederService.findAll();
+		return orderService.findAll();
 	}
 
 	@PostMapping("/save")
 	public Boolean save(@RequestBody Order e) {
-		orederService.save(e);
+		orderService.save(e);
 		return Boolean.TRUE;
 	}
 }
