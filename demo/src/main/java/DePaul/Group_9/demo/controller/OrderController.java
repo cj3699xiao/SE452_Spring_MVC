@@ -34,6 +34,12 @@ public class OrderController {
 		return 	orederService.findById(id);
 	}
 	
+ 
+	@GetMapping("/findByName/{name}")
+	public List<Order> findByName(@PathVariable String name) {
+		return 	orederService.findByName(name);
+	}
+	
 	@PutMapping("/update")
 	public Boolean update(@RequestBody Order e) {
 		orederService.save(e);

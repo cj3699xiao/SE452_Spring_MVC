@@ -1,20 +1,21 @@
 package DePaul.Group_9.demo.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DePaul.Group_9.demo.model.Address;
 import DePaul.Group_9.demo.model.Order;
+import DePaul.Group_9.demo.repository.CustomerRepository;
 import DePaul.Group_9.demo.repository.OrderRepository;
 
 @Service
 public class OrderService {
 	@Autowired
 	private OrderRepository orderRepository;
+	@Autowired
+	private CustomerRepository customerRepository;
 	
 //	public List<Order> findByAddress(Address address){
 //		List<Order> allOrders = orderRepository.findAll();
@@ -33,6 +34,11 @@ public class OrderService {
 	
 	public Optional<Order> findById(long id){
 		return orderRepository.findById(id);
+	}
+	
+	public List<Order> findByName(String name){
+		long id = customerRepository.findByUsername(name).get(0).getCustomerID();
+		return orderRepository.findByCustomerID(id);
 	}
 	
 	public void deleteById(long id) {

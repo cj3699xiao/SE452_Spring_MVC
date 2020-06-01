@@ -1,6 +1,5 @@
 package DePaul.Group_9.demo.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,7 +26,13 @@ public class MerchantService {
 		merchantRepository.deleteById(id);
 	}
 	
-	public void save(Merchant merchant) {
-		merchantRepository.save(merchant);
+	public boolean save(Merchant merchant) {
+		if(merchantRepository.existsByusername(merchant.getUsername())) {
+			return false;
+		}
+		else {
+			merchantRepository.save(merchant);
+			return true;
+		}
 	}
 }

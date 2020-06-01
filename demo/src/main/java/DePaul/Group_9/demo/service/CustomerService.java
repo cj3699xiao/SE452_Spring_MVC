@@ -28,7 +28,14 @@ public class CustomerService {
 		customerRepository.deleteById(id);
 	}
 	
-	public void save(Customer customer) {
-		customerRepository.save(customer);
+	public boolean save(Customer customer) {
+		if(customerRepository.existsByUsername(customer.getUsername())) {
+			return false;
+		}
+		else {
+			customerRepository.save(customer);
+			return true;
+		}
+		
 	}
 }

@@ -112,6 +112,24 @@ public class StartController {
         
         return "merchant";
     }
+    
+    @GetMapping("/customer_page")
+    public String customer_page(Model model) {
+        
+        return "customer_page";
+    }
+    
+    @GetMapping("/merchant_page")
+    public String merchant_page(Model model) {
+        
+        return "merchant_page";
+    }
+    
+    @GetMapping("/search_shoes")
+    public String search_shoes(Model model) {
+        
+        return "search_shoes";
+    }
 
     
 }

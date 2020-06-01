@@ -16,9 +16,14 @@ function sendJSON(){
             // Create a state change callback 
             xhr.onreadystatechange = function () { 
                 if (xhr.readyState === 4 && xhr.status === 200) { 
-  
-                    // Print received data from server 
-                	document.getElementById("body").innerHTML = this.responseText; 
+                	let tr = this.responseText;
+                    if(tr == "customer") {
+                    	document.getElementById("wrong").innerHTML = "Wrong username or password";
+                    }
+                    else {
+	                	document.getElementById("address").innerHTML = tr + "/" + username.value;
+	                	window.location.href = document.getElementById("address").innerHTML;
+                    }
   
                 } 
             }; 

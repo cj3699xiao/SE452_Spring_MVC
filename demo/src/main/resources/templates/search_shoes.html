@@ -7,35 +7,33 @@
   </head> 
   
   <body style="text-align:center;" id="body"> 
-  
     <h1 style="color:green;"> 
-      Welcome!
+      Search you shoes
     </h1> 
+  
     <p> 
-        <!-- Making a text input -->
+     <!-- Making a text input -->
         <!-- <form method="post" action="/order/save" enctype="application/json"> -->
         
-          	<p><input type="text" id="username" placeholder="username"></p>
-          	<p><input type="text" id="password" placeholder="password"></p>
-	        <button onclick="sendJSON()">LOGIN</button> 
-	        <p id="wrong"></p>
 	        <p>
-	        	<p>don't have account? </p>
-	        	<a href="/add_merchant">Sign Up</a>
+	        	<input type="text" id="search_bar" placeholder="search_bar">
+	        	<button onclick="search()">Search</button>
 	        </p>
+	        
+	        
         <!-- </form> -->
           
         <!-- Button to send data -->
         <!-- <button onclick="sendJSON()">Submit</button>  -->
   		<!-- <a href="..\home.html">user list</a> -->
       <!-- For printing result from server -->
-      <p class="result" style="color:green"></p> 
-      <p id="address" style="color:white"></p>
+      <table id="result" class="table" border="1"></table>      
       
-   </p> 
   
-  <!-- Include the JavaScript file -->
-  <script src="js/merchant_login.js"></script>
+  
+  <!-- <script src="js/list_shoes.js"></script> -->
+  <script src="js/search_shoes.js"></script>
+  
   
   </body> 
 </html> 

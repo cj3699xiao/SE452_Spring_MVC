@@ -7,11 +7,20 @@
   </head> 
   
   <body style="text-align:center;" id="body"> 
+  	<p id="username" th:text="${name}">
+    </p>
     <h1 style="color:green;"> 
       Welcome to customer page
     </h1> 
-  
-    
+  	<p>
+	  <p>
+	    <input type="text" id="search_bar" placeholder="search_bar">
+	    <button onclick="search()">Search</button>
+	  </p>
+      <table id="result" class="table" border="1"></table> 
+      <p>your orders</p> 
+      <table id="ooder" class="table" border="1"></table>     
+	  <script src="js/search_shoes.js"></script>
   
   </body> 
 </html> 

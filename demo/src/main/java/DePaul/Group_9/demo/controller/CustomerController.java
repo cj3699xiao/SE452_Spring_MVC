@@ -46,8 +46,10 @@ public class CustomerController {
 	}
 
 	@PostMapping("/save")
-	public Boolean save(@RequestBody Customer e) {
-		customerService.save(e);
-		return Boolean.TRUE;
+	public String save(@RequestBody Customer e) {
+		if(customerService.save(e))
+			return "<a href=\"/customer\">Login</a>";
+		else
+			return "user name already exists";
 	}
 }

@@ -46,8 +46,10 @@ public class MerchantController {
 	}
 
 	@PostMapping("/save")
-	public Boolean save(@RequestBody Merchant m) {
-		merchantService.save(m);
-		return Boolean.TRUE;
+	public String save(@RequestBody Merchant m) {
+		if(merchantService.save(m))
+			return "<a href=\"/merchant\">Login</a>";
+		else
+			return "user name already exists";
 	}
 }

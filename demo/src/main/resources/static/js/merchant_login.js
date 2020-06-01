@@ -15,11 +15,15 @@ function sendJSON(){
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"); 
             // Create a state change callback 
             xhr.onreadystatechange = function () { 
-                if (xhr.readyState === 4 && xhr.status === 200) { 
-  
-                    // Print received data from server 
-                	document.getElementById("body").innerHTML = this.responseText; 
-  
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                	let tr = this.responseText;
+                    if(tr == "merchant") {
+                    	document.getElementById("wrong").innerHTML = "Wrong username or password";
+                    }
+                    else {
+	                	document.getElementById("address").innerHTML = tr; 
+	                	window.location.href = document.getElementById("address").innerHTML;
+                    }
                 } 
             }; 
             

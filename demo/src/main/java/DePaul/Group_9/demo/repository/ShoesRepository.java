@@ -11,7 +11,6 @@ public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
 	List<Shoes> findByShoesID(long id);
 	List<Shoes> findByBrand(String brand);
-	List<Shoes> findByBrandseries(String brandseries);
 	List<Shoes> findByColor(String color);	
 	List<Shoes> findBySize(double size);
 	List<Shoes> findByPrice(double price);
@@ -19,7 +18,6 @@ public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
 	boolean existsByShoesID(long id);
 	boolean existsByBrand(String brand);
-	boolean existsByBrandseries(String brandseries);
 	boolean existsByColor(String color);
 	boolean existsBySize(double size);
 	boolean existsByPrice(double price);
@@ -27,7 +25,6 @@ public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
 	long countByShoesID(long id);
 	long countByBrand(String brand);
-	long countByBrandseries(String brandseries);
 	long countByColor(String color);
 	long countBySize(double size);
 	long countByPrice(double price);
@@ -35,7 +32,6 @@ public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
 	void deleteByShoesID(long id);
 	void deleteByBrand(String brand);
-	void deleteByBrandseries(String brandseries);
 	void deleteByColor(String color);
 	void deleteBySize(double size);
 	void deleteByPrice(double price);

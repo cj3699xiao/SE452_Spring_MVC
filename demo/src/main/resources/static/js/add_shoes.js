@@ -1,10 +1,11 @@
 function sendJSON(){ 
                
             let result = document.querySelector('.result'); 
-          //  let shoesID = document.querySelector('#shoesID'); 
             let brand = document.querySelector('#brand'); 
-            let brand_series = document.querySelector('#brandseries'); 
+            let type = document.querySelector('#type'); 
+            let material = document.querySelector('#material'); 
             let color = document.querySelector('#color'); 
+            let description = document.querySelector('#description'); 
             let size = document.querySelector('#size'); 
             let price = document.querySelector('#price'); 
        
@@ -32,13 +33,13 @@ function sendJSON(){
   
             // Converting JSON data to string 
             var data = JSON.stringify({ 
-            	//"shoesID": shoesID.value,
             	"brand": brand.value,
-            	"brandseries": brandseries.value,
+            	"type": type.value,
+            	"material": material.value,
             	"color": color.value,
+            	"description": description.value,
             	"size": size.value,
             	"price": price.value
-            	
             	}); 
   
             // Sending data with the request 

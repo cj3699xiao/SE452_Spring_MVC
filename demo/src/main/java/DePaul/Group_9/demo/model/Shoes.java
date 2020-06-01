@@ -15,8 +15,10 @@ public class Shoes implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private long shoesID;	
 	private String brand;
-	private String brandseries;
+	private String type;
+	private String material;
 	private String color;
+	private String description;
 	private double size;
 	private double price;
 	
