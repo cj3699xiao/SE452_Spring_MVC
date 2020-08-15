@@ -6,10 +6,6 @@ import javax.persistence.*;
 
 import lombok.Data;
 
-
-
-
-
 @Data
 @Entity
 @Table(name = "address")  //if name is same with table, no needs this line

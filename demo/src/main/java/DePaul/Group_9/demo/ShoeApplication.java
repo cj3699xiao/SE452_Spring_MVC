@@ -26,7 +26,7 @@ public class ShoeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShoeApplication.class, args);
 //		Address a = new Address();
-//		a.getState();		
+//		a.getState();
 //		mongoTemplate.save(test);
 //		flightNum;
 //	    private String review;
