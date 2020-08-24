@@ -1,4 +1,4 @@
-package DePaul.Group_9.demo.model;
+package DePaul.Group_9.demo.POJO;
 
 import java.io.Serializable;
 

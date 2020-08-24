@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Address;
+import DePaul.Group_9.demo.POJO.Address;
 
 
 public interface AddressRepository extends CrudRepository<Address,Long>{

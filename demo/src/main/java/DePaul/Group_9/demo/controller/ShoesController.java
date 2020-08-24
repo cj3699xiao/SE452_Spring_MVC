@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import DePaul.Group_9.demo.model.Shoes;
+import DePaul.Group_9.demo.POJO.Shoes;
 import DePaul.Group_9.demo.service.ShoesService;
 
 @RestController

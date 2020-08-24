@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Item;
-import DePaul.Group_9.demo.model.Order;
+import DePaul.Group_9.demo.POJO.Item;
+import DePaul.Group_9.demo.POJO.Order;
 
 
 public interface ItemRepository extends CrudRepository<Item,Long>{

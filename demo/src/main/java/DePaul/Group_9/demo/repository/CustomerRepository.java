@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Customer;
+import DePaul.Group_9.demo.POJO.Customer;
 
 
 public interface CustomerRepository extends CrudRepository<Customer,Long>{

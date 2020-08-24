@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DePaul.Group_9.demo.model.Customer;
-import DePaul.Group_9.demo.model.Merchant;
+import DePaul.Group_9.demo.POJO.Customer;
+import DePaul.Group_9.demo.POJO.Merchant;
 import DePaul.Group_9.demo.repository.CustomerRepository;
 import DePaul.Group_9.demo.repository.MerchantRepository;
 

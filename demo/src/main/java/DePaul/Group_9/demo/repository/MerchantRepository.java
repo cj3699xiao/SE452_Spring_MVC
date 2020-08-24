@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Merchant;
+import DePaul.Group_9.demo.POJO.Merchant;
 
 
 public interface MerchantRepository extends CrudRepository<Merchant,Long>{

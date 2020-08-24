@@ -8,8 +8,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DePaul.Group_9.demo.model.Order;
-import DePaul.Group_9.demo.model.Shoes;
+import DePaul.Group_9.demo.POJO.Order;
+import DePaul.Group_9.demo.POJO.Shoes;
 import DePaul.Group_9.demo.repository.OrderRepository;
 import DePaul.Group_9.demo.repository.ShoesRepository;
 

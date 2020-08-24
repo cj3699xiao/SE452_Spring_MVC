@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Shoes;
+import DePaul.Group_9.demo.POJO.Shoes;
 
 
 public interface ShoesRepository extends CrudRepository<Shoes,Long>{
