@@ -4,12 +4,9 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import DePaul.Group_9.demo.model.Comment;
-
+import DePaul.Group_9.demo.POJO.Comment;
 
 import org.springframework.data.repository.CrudRepository;
-
-import DePaul.Group_9.demo.model.Comment;
 
 public interface CommentRepository extends CrudRepository<Comment,Long>{
 	List<Comment> findByuserID(long id);

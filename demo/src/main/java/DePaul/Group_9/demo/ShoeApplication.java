@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-import DePaul.Group_9.demo.model.Address;
+import DePaul.Group_9.demo.POJO.Address;
 import DePaul.Group_9.demo.repository.AddressRepository;
 //import edu.depaul.cdm.se452.demo.repository.FlightRepository;
 import DePaul.Group_9.demo.repository.ShoesRepository;
