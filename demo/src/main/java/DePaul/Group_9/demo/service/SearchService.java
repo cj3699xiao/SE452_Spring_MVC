@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import DePaul.Group_9.demo.POJO.Order;
 import DePaul.Group_9.demo.POJO.Shoes;
+import DePaul.Group_9.demo.model.ShoesModel;
 import DePaul.Group_9.demo.repository.OrderRepository;
 import DePaul.Group_9.demo.repository.ShoesRepository;
 
@@ -21,19 +22,19 @@ public class SearchService {
 	@Autowired
 	OrderRepository orderRepository;
 	
-	public List<Shoes> searchShoes(String input) 
+	public List<ShoesModel> searchShoes(String input) 
 	{
 		List<String> keywords = inputSplit(input);
-		List<Shoes> list = new ArrayList<Shoes>();
-		List<Shoes> all = shoesRepository.findAll();
-		for(Shoes shoes : all) {
+		List<ShoesModel> list = new ArrayList<ShoesModel>();
+		List<ShoesModel> all = shoesRepository.findAllShoesModel();
+		for(ShoesModel shoes : all) {
 			for(String keyword : keywords) {
 				
 				if(		shoes.getBrand().contains(keyword)
 						|| shoes.getType().contains(keyword)
 						|| shoes.getMaterial().contains(keyword)
 						|| shoes.getColor().contains(keyword)
-						|| shoes.getDescription().contains(keyword)) {
+				  ) {
 					list.add(shoes);
 				}
 			}
