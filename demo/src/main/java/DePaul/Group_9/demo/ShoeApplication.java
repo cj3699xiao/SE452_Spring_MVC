@@ -1,21 +1,7 @@
 package DePaul.Group_9.demo;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.mongodb.core.MongoTemplate;
-
-import DePaul.Group_9.demo.POJO.Address;
-import DePaul.Group_9.demo.repository.AddressRepository;
-//import edu.depaul.cdm.se452.demo.repository.FlightRepository;
-import DePaul.Group_9.demo.repository.ShoesRepository;
 
 
 @SpringBootApplication

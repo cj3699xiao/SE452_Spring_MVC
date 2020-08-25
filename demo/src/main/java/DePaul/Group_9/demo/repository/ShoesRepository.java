@@ -41,6 +41,10 @@ public interface ShoesRepository extends CrudRepository<Shoes,Long>{
 	
 	@Override
 	List<Shoes> findAll();	
-	@Query("SELECT x.brand,x.type,x.meterial,x.color,x.size,x.price From Shoes x")
+	
+	@Query("SELECT "
+			+ "new DePaul.Group_9.demo.model.ShoesModel"
+			+ "(x.brand,x.type,x.material,x.color,x.size,x.price) "
+			+ "FROM Shoes x")
 	List<ShoesModel> findAllShoesModel();
 }
